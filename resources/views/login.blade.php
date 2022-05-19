@@ -72,13 +72,6 @@
             float: left;
             margin-top: 2%;
         }
-        #teksforgot {
-            margin-top: 30px;
-            margin-bottom: 35px;
-        }
-        input[type="text"]::placeholder {
-            text-align: center;
-        }
 </style>
 </head>
 <body>
@@ -88,15 +81,21 @@
                 <img src="./asset/icon.jpeg" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
-                <form class="login-form">
+                <form class="login-form"  action="{{ route('masuklogin') }}" method="POST">
+                    {{csrf_field()}}
                     <div class="login-title">
-                        <h2 id="teksforgot"><b>FORGOT<br>PASSWORD</b></h2>
+                        <h4><b>LOGIN</b></h4>
                     </div>
                     <div class="set-width">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" name="username" placeholder="Username">
                         </div><br>
-                        <button type="button" class="btn btn-warning" value="Submit">Submit</button><br>
+                        <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        </div>
+                        <a href="#" class="forgot">Forgot Password?</a><br><br>
+                        <button type="submit" class="btn btn-warning">Submit</button><br>
+                        <a href="{{ route('regist') }}">Don't have any account? Register</a>
                     </div>
                 </form>
             </div>

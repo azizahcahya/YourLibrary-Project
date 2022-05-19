@@ -72,6 +72,13 @@
             float: left;
             margin-top: 2%;
         }
+        #teksforgot {
+            margin-top: 30px;
+            margin-bottom: 35px;
+        }
+        input[type="text"]::placeholder {
+            text-align: center;
+        }
 </style>
 </head>
 <body>
@@ -83,24 +90,16 @@
             <div class="col-md-6 offset md-3" id="box-form">
                 <form class="login-form">
                     <div class="login-title">
-                        <h4><b>REGISTER</b></h4>
+                        <h2 id="teksforgot"><b>FORGOT<br>PASSWORD</b></h2>
                     </div>
                     <div class="set-width">
                         <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username">
-                        </div><br>
-                        <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password">
-                        </div><br>
-                        <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Confirm Password">
+                            <input type="text" class="form-control" placeholder="Username">
                         </div><br>
                         <button type="button" class="btn btn-warning" value="Submit">Submit</button><br>
-                        
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </body>
-
