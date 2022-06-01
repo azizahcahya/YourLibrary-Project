@@ -11,7 +11,7 @@
         }
 
         body {
-        background-image: url("./asset/background.png");
+        background-image: url("file:///C:/Users/berlin/Downloads/YourLibrary/background.png");
         height: 100%; 
         background-position: center;
         background-repeat: no-repeat;
@@ -68,37 +68,28 @@
         img{
             height: 350px;
         }
-        .forgot{
-            float: left;
-            margin-top: 2%;
-        }
 </style>
 </head>
 <body>
     <div class="container" id="box">
         <div class="row">
             <div class="col-md-6 offset md-3">
-                <img src="./asset/icon.jpeg" class="welcome-icon" id="gambar">
+                <img src="file:///C:/Users/berlin/Downloads/YourLibrary/icon.jpeg" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
                 <form class="login-form">
                     <div class="login-title">
-                        <h4><b>LOGIN</b></h4>
+                        <h4><b>VERIFICATION</b></h4>
+                        <h4><b>CODE</b></h4>
+                    </div>
+                    <div class="code-line">
+                        <input name='code' class='code-input' required/>
                     </div>
                     <div class="set-width">
-                        <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username">
-                        </div><br>
-                        <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <a href="#" class="forgot">Forgot Password?</a><br><br>
                         <button type="button" class="btn btn-warning" value="Submit">Submit</button><br>
-                        <a href="#">Don't have any account? Register</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </body>
-
