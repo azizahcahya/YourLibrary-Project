@@ -1,0 +1,87 @@
+body{
+    background-color: #00755E;
+}
+
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    background: #F2FEDC;
+    padding:1rem 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+}
+
+header img{
+    width: 7%;
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding:.5rem 3rem;
+    color:var(--light-color);
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color: #00755e;
+}
+
+#box{
+    background-color: rgb(255,255,255,0.8);
+    margin: 12% auto auto auto;
+    height: 10cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20cm;
+}
+
+.welcome-icon{
+    width: 10cm;
+    opacity: 100%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    float: left;
+}
+.login-form{
+    text-align: center;
+    background-color: rgb(1, 161, 173, 0.42);
+    border: 1px rgb(1, 161, 173);
+    border-radius: 0.5cm;
+    height: 350px;
+}
+#box-form{
+    padding-left: 2cm;
+}
+.set-width{
+    padding-left: 1cm;
+    padding-right: 1cm;
+}
+.login-form a{
+    font-size: small;
+    color: #014656;
+}
+.login-title{
+    padding-top: 10%;
+    margin-bottom: 20px;
+    color: rgb(1, 70, 86);
+}
+
+label{
+    
+}

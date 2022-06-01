@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="peminjaman.css" type="text/css"> 
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img class="navbar-brand" href="#" src="./asset/Escape copy.png">
+        <nav class="navbar">
+            <a href="home" class="#">Home</a>
+            <a href="galeri" class="#">Your Book</a>
+            <a href="tour-guide" class="#">Information</a>
+        </nav>
+    </header>
+    <div class="container" id="box">
+        <form class="login-form">
+            <div class="login-title">
+                <h4><b>FORM</b></h4>
+            </div>
+            <div class="set-width">
+                <form action="/register" method="POST">
+                    <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="email" placeholder="email">
+                    </div><br>
+                    <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                    </div><br>
+                    <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title" placeholder="title">
+                    </div><br>
+                    <div class="form-group">
+                    <label>Date Borrowed</label>
+                    <input type="date" class="form-control" name="dateBorrow" placeholder="dateBorrow">
+                    </div><br>
+                    <div class="form-group">
+                    <label>Due Date</label>
+                    <input type="date" class="form-control" name="duedate" placeholder="duedate">
+                    </div><br>
+                    <button type="submit" class="btn btn-warning">Submit</button><br>
+                </form>      
+            </div>
+        </form>
+    </div>
+</body>
+</html>
