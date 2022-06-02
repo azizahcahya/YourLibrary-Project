@@ -70,7 +70,6 @@
             padding-top: 10%;
             margin-bottom: 20px;
             color: rgba(243, 180, 58, 1);
-;
         }
         img{
             height: 350px;
