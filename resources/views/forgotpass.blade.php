@@ -25,7 +25,7 @@
             background-color: aqua;
         }
         #box{
-            background-color: rgb(255,255,255,0.8);
+            /* background-color: rgb(255,255,255,0.8); */
             margin: 12% auto auto auto;
             height: 10cm;
             display: flex;
