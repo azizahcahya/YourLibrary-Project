@@ -24,4 +24,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+Route::get('/forgotpass', function () {
+    return view('forgotpass');
+});
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('masuklogin');
