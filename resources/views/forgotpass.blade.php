@@ -85,7 +85,7 @@
     <div class="container" id="box">
         <div class="row">
             <div class="col-md-6 offset md-3">
-                <img src="./asset/icon.jpeg" class="welcome-icon" id="gambar">
+                <img src="./asset/icon.png" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
                 <form class="login-form">
