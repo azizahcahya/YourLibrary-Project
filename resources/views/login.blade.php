@@ -44,13 +44,19 @@
         }
         .login-form{
             text-align: center;
-            background-color: rgb(1, 161, 173, 0.42);
-            border: 1px rgb(1, 161, 173);
+            background-color: white;
+            /* border: 1px rgb(1, 161, 173); */
             border-radius: 0.5cm;
             height: 350px;
         }
+        #gambar{
+            width: 400px;
+        }
         #box-form{
-            padding-left: 2cm;
+            /* padding-left: 2cm; */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-left: 1px solid rgba(243, 180, 58, 1);
         }
         .set-width{
             padding-left: 1cm;
@@ -58,12 +64,13 @@
         }
         .login-form a{
             font-size: small;
-            color: #014656;
+            color: rgba(243, 180, 58, 1);
         }
         .login-title{
             padding-top: 10%;
             margin-bottom: 20px;
-            color: rgb(1, 70, 86);
+            color: rgba(243, 180, 58, 1);
+;
         }
         img{
             height: 350px;
@@ -72,13 +79,20 @@
             float: left;
             margin-top: 2%;
         }
+        .login-title{
+            color: rgba(243, 180, 58, 1);
+        }
+        .row{
+            border: 2px solid rgba(243, 180, 58, 1);
+            border-radius: 15px;
+        }
 </style>
 </head>
 <body>
     <div class="container" id="box">
         <div class="row">
             <div class="col-md-6 offset md-3">
-                <img src="./asset/icon.jpeg" class="welcome-icon" id="gambar">
+                <img src="./asset/icon.png" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
                 <form class="login-form"  action="{{ route('masuklogin') }}" method="POST">
