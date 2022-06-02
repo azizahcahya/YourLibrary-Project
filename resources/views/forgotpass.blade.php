@@ -25,7 +25,7 @@
             background-color: aqua;
         }
         #box{
-            background-color: rgb(255,255,255,0.8);
+            /* background-color: rgb(255,255,255,0.8); */
             margin: 12% auto auto auto;
             height: 10cm;
             display: flex;
@@ -85,7 +85,7 @@
     <div class="container" id="box">
         <div class="row">
             <div class="col-md-6 offset md-3">
-                <img src="./asset/icon.jpeg" class="welcome-icon" id="gambar">
+                <img src="./asset/icon.png" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
                 <form class="login-form">
