@@ -21,6 +21,9 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/login', function () {
+    return view('register');
+});
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('masuklogin');
 Route::get('/regist', [LoginController::class, 'register'])->name('regist');
 Route::post('/register', [RegisterController::class, 'register'])->name('register');

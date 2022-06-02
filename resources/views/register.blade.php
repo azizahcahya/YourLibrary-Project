@@ -78,7 +78,7 @@
     <div class="container" id="box">
         <div class="row">
             <div class="col-md-6 offset md-3">
-                <img src="./asset/icon.jpeg" class="welcome-icon" id="gambar">
+                <img src="./asset/icon.png" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
                 <form class="login-form">
@@ -86,7 +86,7 @@
                         <h4><b>REGISTER</b></h4>
                     </div>
                     <div class="set-width">
-                        <form action="/register" method="POST">
+                        <form action="#" method="POST">
                             {{ csrf_field() }}
                             <div class="form-group">
                             <input type="text" class="form-control" name="Username" placeholder="Username">
