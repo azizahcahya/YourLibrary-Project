@@ -27,3 +27,7 @@ Route::get('/register', function () {
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('masuklogin');
 Route::get('/regist', [LoginController::class, 'register'])->name('regist');
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
+
+Route::get('/formpeminjaman', function () {
+    return view('formPeminjaman');
+});
