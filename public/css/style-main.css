@@ -1,5 +1,5 @@
 html{
-    font-size: 70%;
+    font-size: 100%;
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
@@ -12,24 +12,25 @@ header{
     position: fixed;
     top:0; left: 0; right:0;
     background: #fff;
-    padding:1rem 1%;
+    padding: 0%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-between;
     z-index: 1000;
     box-shadow: var(--box-shadow);
     text-decoration: none;
 }
 
 header img{
-    width: 7%;
+    margin-left: 1cm;
+    width: 6%;
 }
 
 header .navbar a{
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     border-radius: .5rem;
     padding:.5rem 3rem;
-    color:var(--light-color);
+    color: #F4B536;
     text-decoration: none;
 }
 
@@ -43,6 +44,10 @@ header .navbar a{
 
 header .navbar a.active,
 header .navbar a:hover{
-    color: #fff;
-    background: var(--green);
+    color: rgb(98, 98, 27);
+    background: #F4B536;
+}
+
+header .navbar .searchbox a:hover{
+    background: white;
 }
