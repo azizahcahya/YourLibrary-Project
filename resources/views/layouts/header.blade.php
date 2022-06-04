@@ -18,9 +18,9 @@
     <header>
         <img class="navbar-brand" href="#" src="./asset/icon.png">
         <nav class="navbar">
-            <a href="home">Home</a>
-            <a href="yourbooks">YourBooks</a>
-            <a href="books">Books</a>
+            <a href="home" class="{{Request::is('home')? 'active' : ''}} ms-3">Home</a>
+            <a href="yourbooks" class="{{Request::is('yourbooks')? 'active' : ''}} ms-3">YourBook</a>
+            <a href="books" class="{{Request::is('book')? 'active' : ''}} ms-3">Books</a>
             <div class="searchbox ms-3">
             <a>
                 <div class="input-group">
@@ -30,7 +30,7 @@
                             <i class="fa fa-search"></i>
                         </button>
                     </span>
-             </div>
+                </div>
             </div>
             </a>
         </nav>

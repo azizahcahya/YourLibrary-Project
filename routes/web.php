@@ -31,3 +31,7 @@ Route::get('/register', [LoginController::class, 'register'])->name('regist');
 Route::get('/yourbooks', function () {
     return view('yourBooks');
 });
+
+Route::get('/formpeminjaman', function () {
+    return view('formPeminjaman');
+});

@@ -5,13 +5,15 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #f9f6f2;
-    user-select: none;
+    background-image: url("../asset/background.png");
+    height: 100%;
+    font-size: large;
+    color: #F4B536;
 }
 header{
     position: fixed;
     top:0; left: 0; right:0;
-    background: #fff;
+    background: #F8F8F8;
     padding: 0%;
     display: flex;
     align-items: center;
@@ -44,10 +46,10 @@ header .navbar a{
 
 header .navbar a.active,
 header .navbar a:hover{
-    color: rgb(98, 98, 27);
+    color: white;
     background: #F4B536;
 }
 
 header .navbar .searchbox a:hover{
-    background: white;
+    background: #F8F8F8;
 }
