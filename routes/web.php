@@ -35,3 +35,7 @@ Route::get('/yourbooks', function () {
 Route::get('/formpeminjaman', function () {
     return view('formPeminjaman');
 });
+
+Route::get('/extenddate', function () {
+    return view('extendForm');
+});
