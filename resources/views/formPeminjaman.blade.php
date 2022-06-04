@@ -6,6 +6,8 @@
 
 @section('Container')
 <div class="container p-4">
+    <form action="">
+        {{csrf_field()}}
     <h4><b>FORM</b></h4>
     <div class="mb-3 row">
         <label for="staticEmail" class="col-md-4 col-form-label">Email</label>
@@ -38,6 +40,7 @@
         </div>
     </div>
     <div class="button">
-        <button type="button" class="btn btn-outline-light"><b>SUBMIT</b></button>
+        <button type="button" class="btn btn-outline-light"><b>SUBMIT</b></button></div>
+    </form>
 </div>
 @endsection

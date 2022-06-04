@@ -5,9 +5,9 @@
 @section('Container')
 <div class="container">
     <div class="d-grid gap-3">
-        <a href="">
+        <a href="/formpeminjaman">
         <div class="p-4 border">Borrowing From</div></a>
-        <a href="">
+        <a href="/extenddate">
         <div class="p-4 border">Book Borrowing Extension</div></a>
     </div>
 </div>

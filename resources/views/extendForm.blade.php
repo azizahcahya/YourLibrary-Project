@@ -7,6 +7,8 @@
 @section('Container')
 <div class="container p-4">
     <h4><b>EXTEND</b></h4>
+    <form action="">
+        {{csrf_field()}}
     <div class="mb-3 row">
         <label for="staticEmail" class="col-md-4 col-form-label">Email</label>
         <div class="col-sm-7" >
@@ -38,7 +40,8 @@
         </div>
     </div>
     <div class="button">
-        <button type="button" class="btn btn-outline-light"><b>SUBMIT</b></button>
+        <button type="button" class="btn btn-outline-light"><b>SUBMIT</b></button></div>
     </div>
+    </form>
 </div>
 @endsection
