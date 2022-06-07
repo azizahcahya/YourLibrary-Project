@@ -26,3 +26,15 @@ Route::get('/forgotpass', function () {
 });
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('masuklogin');
 Route::get('/register', [LoginController::class, 'register'])->name('regist');
+
+Route::get('/yourbooks', function () {
+    return view('yourBooks');
+});
+
+Route::get('/formpeminjaman', function () {
+    return view('formPeminjaman');
+});
+
+Route::get('/extenddate', function () {
+    return view('extendForm');
+});
