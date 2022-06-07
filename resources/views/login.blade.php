@@ -45,7 +45,7 @@
         .login-form{
             text-align: center;
             background-color: white;
-            border: 1px rgba(243, 180, 58, 1);
+            border: 1px rgb(1, 161, 173);
             border-radius: 0.5cm;
             height: 350px;
         }

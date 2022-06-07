@@ -104,7 +104,7 @@
                     </div>
                     <div class="set-width">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username">
+                            <input type="email" class="form-control" placeholder="Email">
                         </div><br>
                         <button type="button" class="btn btn-warning">Submit</button><br>
                     </div>
