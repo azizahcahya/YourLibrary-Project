@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// LOGIN & REGISTER
+// LOGIN
 Route::get('/login', function () {
     return view('login');
 });
@@ -32,6 +33,9 @@ Route::get('/forgotpass', function () {
 });
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('masuklogin');
 
+// REGISTER
+// Route::post('/postregist', [RegisterController::class, 'register'])->name('masukregist');
+Route::post('/postregist', [LoginController::class, 'register'])->name('masukregist');
 // 
 Route::get('/yourbooks', function () {
     return view('yourBooks');
