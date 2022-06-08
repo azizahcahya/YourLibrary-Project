@@ -25,7 +25,7 @@
             background-color: aqua;
         }
         #box{
-            /* background-color: rgb(255,255,255,0.8); */
+            background-color: rgb(255,255,255,0.8);
             margin: 12% auto auto auto;
             height: 10cm;
             display: flex;
@@ -44,13 +44,19 @@
         }
         .login-form{
             text-align: center;
-            background-color: rgb(1, 161, 173, 0.42);
+            background-color: white;
             border: 1px rgb(1, 161, 173);
             border-radius: 0.5cm;
             height: 350px;
         }
+        #gambar{
+            width: 400px;
+        }
         #box-form{
-            padding-left: 2cm;
+            /* padding-left: 2cm; */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-left: 1px solid rgba(243, 180, 58, 1);
         }
         .set-width{
             padding-left: 1cm;
@@ -58,12 +64,13 @@
         }
         .login-form a{
             font-size: small;
-            color: #014656;
+            color: rgba(243, 180, 58, 1);
         }
         .login-title{
             padding-top: 10%;
-            margin-bottom: 20px;
-            color: rgb(1, 70, 86);
+            margin-top: 15px;
+            margin-bottom: 50px;
+            color: rgba(243, 180, 58, 1);
         }
         img{
             height: 350px;
@@ -72,12 +79,15 @@
             float: left;
             margin-top: 2%;
         }
-        #teksforgot {
-            margin-top: 30px;
-            margin-bottom: 35px;
+        .login-title{
+            color: rgba(243, 180, 58, 1);
         }
-        input[type="text"]::placeholder {
-            text-align: center;
+        .row{
+            border: 2px solid rgba(243, 180, 58, 1);
+            border-radius: 15px;
+        }
+        .btn{
+            margin-top: 10px;
         }
 </style>
 </head>
@@ -94,9 +104,9 @@
                     </div>
                     <div class="set-width">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username">
+                            <input type="email" class="form-control" placeholder="Email">
                         </div><br>
-                        <button type="button" class="btn btn-warning" value="Submit">Submit</button><br>
+                        <button type="button" class="btn btn-warning">Submit</button><br>
                     </div>
                 </form>
             </div>
