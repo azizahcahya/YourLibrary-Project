@@ -106,7 +106,7 @@
                         <div class="form-group">
                         <input type="password" class="form-control" name="password" placeholder="Password">
                         </div>
-                        <a href="#" class="forgot">Forgot Password?</a><br><br>
+                        <a href="/forgotpass" class="forgot">Forgot Password?</a><br><br>
                         <button type="submit" class="btn btn-warning">Submit</button><br>
                         <a href="/register">Don't have any account? Register</a>
                     </div>
