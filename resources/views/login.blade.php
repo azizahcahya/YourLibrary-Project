@@ -108,7 +108,7 @@
                         </div>
                         <a href="#" class="forgot">Forgot Password?</a><br><br>
                         <button type="submit" class="btn btn-warning">Submit</button><br>
-                        <a href="{{ route('regist') }}">Don't have any account? Register</a>
+                        <a href="/register">Don't have any account? Register</a>
                     </div>
                 </form>
             </div>

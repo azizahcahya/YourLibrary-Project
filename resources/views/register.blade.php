@@ -94,24 +94,22 @@
                 <img src="./asset/icon.png" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
-                <form class="login-form">
+                <form class="login-form"  action="{{ route('masuklogin') }}" method="POST">
+                    {{csrf_field()}}
                     <div class="login-title">
                         <h4><b>REGISTER</b></h4>
                     </div>
                     <div class="set-width">
-                        <form action="{{ route('masukregist') }}" method="post">
-                            {{ csrf_field() }}
-                            <div class="form-group">
-                            <input type="text" class="form-control" name="username" placeholder="Username">
-                            </div><br>
-                            <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Email">
-                            </div><br>
-                            <div class="form-group">
-                            <input type="password" class="form-control" name="password" placeholder="Password">
-                            </div><br>
-                            <button type="submit" class="btn btn-warning">Submit</button><br>
-                        </form>      
+                        <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Username">
+                        </div><br>
+                        <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div><br>
+                        <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        </div><br>
+                        <button type="submit" class="btn btn-warning">Submit</button><br>
                     </div>
                 </form>
             </div>

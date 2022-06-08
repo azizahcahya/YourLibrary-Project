@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,6 +20,11 @@ class LoginController extends Controller
         return redirect('/login');
     }
     public function register(Request $request) {
-        echo 'Hello World!';
+        User::create([
+            'username'=>$request->username,
+            'email'=>$request->email,
+            'password'=>bcrypt($request->password)
+        ]);
+        return redirect('/login');
     }
 }

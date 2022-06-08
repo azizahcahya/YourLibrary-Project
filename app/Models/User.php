@@ -14,4 +14,10 @@ class User extends Authenticatable
 {
     use HasFactory;
     protected $table= "akun";
+
+    protected $fillable = [
+        'username',
+        'email',
+        'password',
+    ];
 }
