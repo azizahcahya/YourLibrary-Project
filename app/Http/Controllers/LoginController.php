@@ -15,7 +15,7 @@ class LoginController extends Controller
     }
     public function postlogin(Request $request) {
         if(Auth::attempt($request->only('username', 'password'))){
-            return view('home');
+            return redirect('/admin');
         }
         return view('login');
     }
@@ -29,6 +29,6 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
-        return redirect('/login');
+        return redirect('/');
     }
 }

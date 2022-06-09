@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware;
 // use App\Http\Controllers\RegisterController;
 
 /*
@@ -30,6 +31,20 @@ Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('masuklog
 // REGISTER
 Route::post('/postregist', [LoginController::class, 'register'])->name('masukregist');
 // 
+
+Route::group(['middleware'=>'admin'], function(){
+    Route::get('/admin', function(){
+        return view('formPeminjaman');
+    });
+});
+
+// Route::get('/admin', function(){
+//     return view('formPeminjaman');
+// });
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Route::get('/home', function () {
     return view('home');
