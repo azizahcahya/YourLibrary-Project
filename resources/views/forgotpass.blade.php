@@ -67,7 +67,7 @@
             color: rgba(243, 180, 58, 1);
         }
         .login-title{
-            padding-top: 10%;
+            padding-top: 5%;
             margin-top: 15px;
             margin-bottom: 50px;
             color: rgba(243, 180, 58, 1);
@@ -98,14 +98,17 @@
                 <img src="./asset/icon.png" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
-                <form class="login-form" action="/resetPass" method="post">
+                <form class="login-form" action="/reset" method="post">
                     {{csrf_field()}}
                     <div class="login-title">
                         <h2 id="teksforgot"><b>FORGOT<br>PASSWORD</b></h2>
                     </div>
                     <div class="set-width">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div><br>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="New Password">
                         </div><br>
                         <button type="submit" class="btn btn-warning">Submit</button><br>
                     </div>

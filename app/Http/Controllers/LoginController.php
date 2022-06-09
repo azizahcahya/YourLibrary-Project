@@ -44,4 +44,8 @@ class LoginController extends Controller
         ]);
         return redirect('/');
     }
+    public function resetPass(Request $request){
+        User::where('email', $email)->update(['password'=>$request->input('password')]);
+        return redirect('/login');
+    }
 }

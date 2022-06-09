@@ -52,6 +52,8 @@ Route::delete('/admin/users/{id}', [AdminUserController::class, 'destroy'])->nam
 Route::get('/admin/posts/checkSlug', [AdminPostController::class, 'checkSlug']);
 Route::resource('/admin/posts', AdminPostController::class);
 
+Route::post('/reset', [LoginController::class, 'resetPass']);
+
 // Route::get('/admin', function(){
 //     return view('formPeminjaman');
 // });
