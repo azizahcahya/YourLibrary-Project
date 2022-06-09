@@ -94,7 +94,7 @@
                 <img src="./asset/icon.png" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
-                <form class="login-form"  action="{{ route('masuklogin') }}" method="POST">
+                <form class="login-form"  action="{{ route('masukregist') }}" method="POST">
                     {{csrf_field()}}
                     <div class="login-title">
                         <h4><b>REGISTER</b></h4>
