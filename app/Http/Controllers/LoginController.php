@@ -2,26 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
     //
-    public function login() {
-        return view('login');
-    }
-    public function postlogin(Request $request) {
-        if(Auth::attempt($request->only('username', 'password'))){
-            return redirect('/admin');
+    public function authenticate(Request $request){
+        $credentials = $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required'
+        ]);
+
+        if(Auth::attempt($credentials)){
+            $request->session()->regenerate();
+
+            if (auth()->user()->role === 'administrator' || auth()->user()->role === 'pustakawan'){
+                return redirect()->intended('/admin');
+            } else {
+                return redirect()->intended('/');
+            }
         }
-        return view('login');
+
+        return back()->with('loginError', 'Login failed!');
     }
-    public function logout(Request $request) {
+
+    public function logout(Request $request){
         Auth::logout();
-        return redirect('/login');
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
     public function register(Request $request){
         User::create([

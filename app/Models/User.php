@@ -12,13 +12,30 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+    use HasApiTokens;
     use HasFactory;
-    protected $table= "akun";
+    use HasProfilePhoto;
+    use Notifiable;
+    use TwoFactorAuthenticatable;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var string[]
+     */
     protected $fillable = [
+        'name',
         'username',
         'email',
-        'role',
         'password',
+        'phone',
+        'role'
     ];
+
+   
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
