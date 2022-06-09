@@ -15,12 +15,8 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
 // LOGIN
-Route::get('/login', function () {
+Route::get('/', function () {
     return view('login');
 });
  
@@ -36,6 +32,11 @@ Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('masuklog
 // REGISTER
 Route::post('/postregist', [LoginController::class, 'register'])->name('masukregist');
 // 
+
+Route::get('/home', function () {
+    return view('home');
+});
+
 Route::get('/yourbooks', function () {
     return view('yourBooks');
 });
