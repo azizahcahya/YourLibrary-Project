@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -37,10 +38,20 @@ class LoginController extends Controller
         return redirect('/');
     }
     public function register(Request $request){
+        $request ->validate([
+            'name' => 'required|min:3',
+            'username' => 'required|min:3',
+            'email' => 'required|email',
+            'password' => 'required|min:3',
+            'phone' => 'required|min:6',
+        ]);
         User::create([
+            'name' => $request->name,
             'username' => $request->username,  
             'email' => $request->email,
             'password' => bcrypt($request->password),
+            'phone' => $request->phone,
+            'role' => 'public',
         ]);
         return redirect('/');
     }
