@@ -8,7 +8,7 @@
 
 @section('Container')
 <div class="wrapper">
-    <div class="prev-btn"><i class="fas fa-chevron-left"></i></div>
+  <div class="prev-btn"><i class="fas fa-chevron-left"></i></div>
 
     <div class="slides-container">
       <div class="slide-image">
@@ -46,6 +46,30 @@
 
     <div class="next-btn"><i class="fas fa-chevron-right"></i></div>
   </div>
+</div>
+<div class="container list">
+  @foreach ($posts as $key => $post)
+  @if($key < 8)
+    @if ($key % 4 == 0)
+        @php echo '<div class = "row">';@endphp
+
+    @endif
+        @php echo "<div class='col'>
+          <div class='book'>" @endphp
+            <p class='ms-3 mt-3'>{{$post->id}}
+              <img src='{{ asset('image/' . $post->image) }}' class='figure-img img-fluid rounded-lg' alt='keratonYogya'>
+          @php echo "</div>
+        </div>";
+        @endphp
+     @if ($key % 4 == 3)
+        @php echo '</div>';@endphp
+        @endif
+  @endif
+  @endforeach
+</div>
+
+
+
     <script>
         const slideImage = document.querySelectorAll(".slide-image");
 const slidesContainer = document.querySelector(".slides-container");

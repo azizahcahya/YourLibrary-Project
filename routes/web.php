@@ -54,17 +54,16 @@ Route::resource('/admin/posts', AdminPostController::class);
 
 Route::post('/reset', [LoginController::class, 'resetPass']);
 
-// Route::get('/admin', function(){
-//     return view('formPeminjaman');
-// });
-
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
+Route::get('home', function () {
     return view('home');
 });
+Route::resource('home', PostController::class);
+Route::get('home/{id}', [PostController::class, 'show']);
+
 
 Route::get('/yourbooks', function () {
     return view('yourBooks');
@@ -87,3 +86,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
