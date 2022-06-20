@@ -22,7 +22,7 @@
               </div>
       </div>
       <div class="slide-image">
-        <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt=""/>
+        <img src="./asset/book1.png" alt=""/>
         <div class="text-content">
             <h2 class="title">Winter <span>Season</span></h2>
             <p>Winter is the coldest season of the year in polar and temperate zones. It occurs

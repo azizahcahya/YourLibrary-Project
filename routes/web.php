@@ -59,7 +59,7 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('home', function () {
+Route::get('/home', function () {
     return view('home');
 });
 Route::resource('home', PostController::class);

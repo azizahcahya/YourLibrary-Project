@@ -124,7 +124,7 @@
                 <form class="login-form"  action="/login" method="POST">
                     {{csrf_field()}}
                     <div class="login-title">
-                        <h4><b>LOGIN</b></h4>
+                        <h2><b>LOGIN</b></h2>
                     </div>
                     <div class="set-width">
                         <div class="form-group">
@@ -137,10 +137,9 @@
                         </div><br>
                         <div class="form-group">
                         <input type="password" class="form-control" name="password" placeholder="Password" required>
-                        </div>
-                        <a href="/forgotpass" class="forgot">Forgot Password?</a><br><br>
-                        <button type="submit" class="btn btn-warning">Submit</button><br>
-                        <a href="/register">Don't have any account? Register</a>
+                        </div><br>
+                        <button type="submit" class="btn btn-warning" style="margin-bottom: 10px;">Submit</button><br>
+                        Don't have any account?<a href="/register" style="font-size: medium;"> Register</a>
                     </div>
                 </form>
             </div>

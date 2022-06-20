@@ -21,7 +21,7 @@ class LoginController extends Controller
             if (auth()->user()->role === 'administrator' || auth()->user()->role === 'pustakawan'){
                 return redirect()->intended('/admin');
             } else {
-                return redirect()->intended('/');
+                return redirect()->intended('/home');
             }
         }
 
