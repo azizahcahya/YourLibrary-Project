@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware;
@@ -64,13 +65,16 @@ Route::get('home', function () {
 Route::resource('home', PostController::class);
 Route::get('home/{id}', [PostController::class, 'show']);
 
+Route::resource('/formpeminjaman', PeminjamanController::class);
 
+Route::get('/formpeminjaman/{id}', [PeminjamanController::class, 'create']);
+Route::post('/formpeminjaman/{id}', [PeminjamanController::class, 'store']);
+
+
+Route::resource('/yourbooks', PeminjamanController::class);
+Route::get('/yourbooks', [PeminjamanController::class, 'show_peminjaman']);
 Route::get('/yourbooks', function () {
     return view('yourBooks');
-});
-
-Route::get('/formpeminjaman', function () {
-    return view('formPeminjaman');
 });
 
 Route::get('/extenddate', function () {

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Peminjaman extends Migration
+class CreatePeminjamenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class Peminjaman extends Migration
      */
     public function up()
     {
-        Schema::create('peminjaman', function (Blueprint $table) {
+        Schema::create('peminjamen', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_user');
-            $table->date('tgl_peminjaman');
-            $table->date('due date');
-            $table->string('nama_buku');
-            $table->string('image');
+            $table->String('title')->nullable();
+            $table->date('DateBorrowed');
+            $table->date('DueDate');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +29,6 @@ class Peminjaman extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('peminjaman');
+        Schema::dropIfExists('peminjamen');
     }
 }
