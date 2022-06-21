@@ -18,7 +18,7 @@
         <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action" id="list-item">
                 <h4>{{$post->id}}. {{$post->title}}</h4>
-                <h6>Buku dapat dipinjam sampai: {{$post->DueDate}}</h6>    
+                <h6 style="color: grey">Buku dapat dipinjam sampai: {{$post->DueDate}}</h6>    
             </a>
         </div>
     </div>

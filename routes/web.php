@@ -4,6 +4,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\booksController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PeminjamanController;
@@ -71,6 +72,13 @@ Route::resource('/formpeminjaman', PeminjamanController::class);
 Route::get('/formpeminjaman/{id}', [PeminjamanController::class, 'create']);
 Route::post('/formpeminjaman/{id}', [PeminjamanController::class, 'store']);
 
+Route::resource('books', booksController::class);
+Route::get('/books', [booksController::class, 'lihatbuku']);
+// Route::get('books/{id}', [booksController::class, 'show']);
+Route::get('booksDetail/{id}', [booksController::class, 'show_detail']);
+Route::get('/booksDetail', function () {
+    return view('booksDetail');
+});
 
 Route::resource('/yourbooks', YourBooksController::class);
 Route::get('/yourbooks', [YourBooksController::class, 'listpeminjaman']);
