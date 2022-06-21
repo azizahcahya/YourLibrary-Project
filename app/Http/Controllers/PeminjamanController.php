@@ -96,12 +96,6 @@ class PeminjamanController extends Controller
             'posts'=>$post]);
     }
 
-    public function show_peminjaman($id){
-        $post = Peminjaman::find($id);
-        return view('yourBooks', [
-            'posts'=>$post
-        ]);
-    }
     /**
      * Show the form for editing the specified resource.
      *

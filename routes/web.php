@@ -4,10 +4,12 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\booksController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\YourBooksController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware;
 // use App\Http\Controllers\RegisterController;
@@ -74,12 +76,20 @@ Route::resource('/formpeminjaman', PeminjamanController::class);
 Route::get('/formpeminjaman/{id}', [PeminjamanController::class, 'create']);
 Route::post('/formpeminjaman/{id}', [PeminjamanController::class, 'store']);
 
-
-Route::resource('/yourbooks', PeminjamanController::class);
-Route::get('/yourbooks', [PeminjamanController::class, 'show_peminjaman']);
-Route::get('/yourbooks', function () {
-    return view('yourBooks');
+Route::resource('books', booksController::class);
+Route::get('/books', [booksController::class, 'lihatbuku']);
+// Route::get('books/{id}', [booksController::class, 'show']);
+Route::get('booksDetail/{id}', [booksController::class, 'show_detail']);
+Route::get('/booksDetail', function () {
+    return view('booksDetail');
 });
+
+Route::resource('/yourbooks', YourBooksController::class);
+Route::get('/yourbooks', [YourBooksController::class, 'listpeminjaman']);
+Route::get('/yourbooks/{id}', [YourBooksController::class, 'show']);
+// Route::get('/yourbooks', function () {
+//     return view('yourBooks');
+// });
 
 Route::get('/extenddate', function () {
     return view('extendForm');

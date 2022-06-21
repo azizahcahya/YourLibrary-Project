@@ -14,18 +14,22 @@ class PeminjamanSeeder extends Seeder
      */
     public function run()
     {
-       
-
         Peminjaman::create([
-            'DateBorrowed' => 2022-11-11,
-            'DueDate' => 2022-06-24,
-            'title' => 'Judul Pertama'
-
-
-
-            
+            'title' => 'I Want to Die But I to Eat Tteokbokki',
+            'DateBorrowed' => '2022-06-12',
+            'DueDate' => '2022-06-22'
         ]);
 
-        
+        Peminjaman::create([
+            'title' => 'I want to Eat Tteokbokki',
+            'DateBorrowed' => '2022-06-11',
+            'DueDate' => '2022-06-21'
+        ]);
+
+        Peminjaman::create([
+            'title' => 'I want to Sleep',
+            'DateBorrowed' => '2022-06-09',
+            'DueDate' => '2022-06-27'
+        ]);
     }
 }
