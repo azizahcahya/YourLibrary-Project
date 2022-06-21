@@ -13,10 +13,16 @@
     <div class="container mt-5">
         <h3>Books on Borrowed</h3>
     </div>
-    <div class="p-4 mx-5">
+    @foreach ($posts as $post)
+    <div class="p-2 mx-5">
         <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action" id="list-item">{{$posts->title}}</a>
-          </div>
+            <a href="#" class="list-group-item list-group-item-action" id="list-item">
+                <h4>{{$post->id}}. {{$post->title}}</h4>
+                <h6>Buku dapat dipinjam sampai: {{$post->DueDate}}</h6>    
+            </a>
+        </div>
     </div>
+
+    @endforeach
 </div>
 @endsection

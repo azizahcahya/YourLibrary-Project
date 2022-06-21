@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Peminjaman;
 use Illuminate\Http\Request;
-use App\Models\Post;
 
-
-class PeminjamanController extends Controller
+class YourBooksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,8 @@ class PeminjamanController extends Controller
      */
     public function index()
     {
-        return view('formPeminjaman', [
-            'posts'=>Post::all()
+        return view('yourBooks', [
+            'posts'=>Peminjaman::all()
         ]);
     }
 
@@ -28,7 +26,7 @@ class PeminjamanController extends Controller
      */
     public function create()
     {
-        return view('formPeminjaman');
+        //
     }
 
     /**
@@ -39,17 +37,7 @@ class PeminjamanController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'title' => 'nullable',
-            'DateBorrowed' => 'required',
-            'DueDate' => 'required'
-        ]);
-        
-        Peminjaman::create($validatedData);
-
-        // $validatedData['user_id'] = auth()->user()->id;
-
-        return redirect('/formpeminjaman/{id}')->with('success', 'New post has been added!');
+        //
     }
 
     /**
@@ -60,9 +48,10 @@ class PeminjamanController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id);
-        return view('formPeminjaman', [
-            'posts'=>$post]);
+        $post = Peminjaman::find($id);
+        return view('yourBooks', [
+            'posts'=>$post
+        ]);
     }
 
     /**
@@ -71,12 +60,9 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Peminjaman $peminjaman)
+    public function edit($id)
     {
-        return view('extendDate', [
-            'post' => $peminjaman,
-            'posts'=>Peminjaman::all()
-        ]);
+        //
     }
 
     /**
@@ -86,18 +72,9 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Peminjaman $peminjaman)
+    public function update(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            'title' => 'nullable',
-            'DateBorrowed' => 'required',
-            'DueDate' => 'required'
-        ]);
-
-        Peminjaman::where('id', $peminjaman->id)
-            ->update($validatedData);
-
-        return redirect('/formpeminjaman/{id}')->with('success', 'Peminjaman has been updated!');
+        //
     }
 
     /**
@@ -109,5 +86,11 @@ class PeminjamanController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function listpeminjaman(Request $request){
+        return view('yourBooks', [
+            'posts' => Peminjaman::all()
+        ]);
     }
 }
