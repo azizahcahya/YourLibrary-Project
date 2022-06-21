@@ -85,6 +85,15 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="/admin/booking" class="nav-link {{ Request::is('admin/booking*') ? 'active':'' }}">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Request
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            
             <a href="#" class="nav-link">
               <p>
                 <form action="/logout" method="POST">

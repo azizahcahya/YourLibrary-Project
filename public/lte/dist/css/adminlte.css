@@ -45852,7 +45852,9 @@ blockquote.quote-gray-dark h6 {
 .bg-success {
   background-color: #28a745 !important;
 }
-
+.bg-purp {
+  background-color: #6610f2 !important;
+}
 .bg-success,
 .bg-success > a {
   color: #fff !important;

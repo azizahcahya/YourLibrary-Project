@@ -50,6 +50,10 @@ Route::get('/admin/users/create', [AdminUserController::class, 'create'])->name(
 Route::post('/admin/users/create', [AdminUserController::class, 'store'])->name('Store Data User');
 Route::delete('/admin/users/{id}', [AdminUserController::class, 'destroy'])->name('Delete Data User');
 
+Route::get('/admin/booking', [PeminjamanController::class, 'indexnew'])->name('Manage Booking');
+Route::get('/admin/booking/{id}}', [PeminjamanController::class, 'editstatus']);
+Route::post('/admin/booking/{id}}', [PeminjamanController::class, 'updatestatus']);
+Route::delete('/admin/booking/{id}', [PeminjamanController::class, 'destroy'])->name('Delete Data User');
 Route::get('/admin/posts/checkSlug', [AdminPostController::class, 'checkSlug']);
 Route::resource('/admin/posts', AdminPostController::class);
 

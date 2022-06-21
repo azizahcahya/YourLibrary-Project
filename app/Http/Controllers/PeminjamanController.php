@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Peminjaman;
 use Illuminate\Http\Request;
-use App\Models\Post;
+
 
 
 class PeminjamanController extends Controller
@@ -20,7 +20,38 @@ class PeminjamanController extends Controller
             'posts'=>Post::all()
         ]);
     }
+    public function indexnew(){
+        $data=\DB::table('peminjamen')->get();
+        return view('admin.booking.index', ['data' => $data]);
+    }
 
+    public function editstatus($id)
+    {
+        $data = \DB::table('peminjamen')->where('id', $id)->first();
+        return view('admin.booking.edit', compact('data', 'id'));
+    }
+    public function updatestatus(Request $request, $id)
+    {
+        switch($request->get('approve'))
+        {
+            case 0:
+                Peminjaman::postpone($id);
+                break;
+            case 1:
+                Peminjaman::approve($id);
+                break;
+            case 2:
+                Peminjaman::reject($id);
+                break;
+            case 3:
+                Peminjaman::postpone($id);
+                break;
+            default:    
+                break;
+
+        }
+        return redirect('/admin/booking');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -112,8 +143,9 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+    // public function destroy($id)
+    // {
+    //     DB::delete('delete from peminjamen where id = ?',[$id]);
+    //     return redirect('/admin/booking')->with('success', 'User has been deleted');
+    // }
 }

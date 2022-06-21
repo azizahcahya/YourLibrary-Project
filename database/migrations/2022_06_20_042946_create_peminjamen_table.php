@@ -16,8 +16,10 @@ class CreatePeminjamenTable extends Migration
         Schema::create('peminjamen', function (Blueprint $table) {
             $table->id();
             $table->String('title')->nullable();
-            $table->date('DateBorrowed');
-            $table->date('DueDate');
+            $table->date('DateBorrowed')->nullable();
+            $table->date('DueDate')->nullable();
+            $table->smallInteger('status')->default(0);
+            $table->dateTime('moderated_at')->nullable();
             $table->timestamps();
         });
     }
