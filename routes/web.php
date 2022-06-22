@@ -72,7 +72,9 @@ Route::resource('home', PostController::class);
 Route::get('home/{id}', [PostController::class, 'show']);
 
 Route::resource('/formpeminjaman', PeminjamanController::class);
-
+// Route::get('/formpeminjaman', function () {
+//     return view('formPeminjaman');
+// });
 Route::get('/formpeminjaman/{id}', [PeminjamanController::class, 'create']);
 Route::post('/formpeminjaman/{id}', [PeminjamanController::class, 'store']);
 

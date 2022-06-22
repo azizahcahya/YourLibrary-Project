@@ -15,7 +15,7 @@ class PeminjamanSeeder extends Seeder
     public function run()
     {
         Peminjaman::create([
-            'title' => 'I Want to Die But I to Eat Tteokbokki',
+            'title' => 'I Want to Die But I Want to Eat Tteokbokki',
             'DateBorrowed' => '2022-06-12',
             'DueDate' => '2022-06-22'
         ]);
