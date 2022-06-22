@@ -1,0 +1,23 @@
+.list{
+    display: block;
+    margin-left: 10px;
+  }
+  
+  .list img{
+    width: 120px;
+    margin-top: 10px;
+  }
+  
+  .list p{
+    color: rgba(244, 181, 54, 1);
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'inika';
+  }
+  
+  .book{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(248, 248, 248, 1);
+    margin-top: 20px;
+  }

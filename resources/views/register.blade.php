@@ -67,7 +67,7 @@
             color: rgba(243, 180, 58, 1);
         }
         .login-title{
-            padding-top: 10%;
+            padding-top: 7%;
             margin-bottom: 20px;
             color: rgba(243, 180, 58, 1);
         }
@@ -94,24 +94,27 @@
                 <img src="./asset/icon.png" class="welcome-icon" id="gambar">
             </div>
             <div class="col-md-6 offset md-3" id="box-form">
-                <form class="login-form">
+                <form class="login-form"  action="{{ route('masukregist') }}" method="POST">
+                    {{csrf_field()}}
                     <div class="login-title">
                         <h4><b>REGISTER</b></h4>
                     </div>
                     <div class="set-width">
-                        <form action="#" method="POST">
-                            {{ csrf_field() }}
-                            <div class="form-group">
-                            <input type="text" class="form-control" name="Username" placeholder="Username">
-                            </div><br>
-                            <div class="form-group">
+                        <div class="form-group" style="margin-bottom: 10px;">
+                            <input type="text" class="form-control" name="name" placeholder="Name">                     
+                        </div>
+                        <div class="input-group" style="height: 50px;">
+                            <input type="text" class="form-control" name="username" placeholder="Username">
+                            <span style="margin-right: 8px;"></span>
+                            <input type="text" class="form-control" name="phone" placeholder="Number Phone">
+                        </div>
+                        <div class="form-group" style="margin-top: 10px;">
+                            <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group" style="margin-top: 10px;">
                             <input type="password" class="form-control" name="password" placeholder="Password">
-                            </div><br>
-                            <div class="form-group">
-                            <input type="password" class="form-control" name="password" placeholder="Confirm Password">
-                            </div><br>
-                            <button type="submit" class="btn btn-warning">Submit</button><br>
-                        </form>      
+                        </div><br>
+                        <button type="submit" class="btn btn-warning">Submit</button><br>
                     </div>
                 </form>
             </div>

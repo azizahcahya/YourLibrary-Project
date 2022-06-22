@@ -19,3 +19,8 @@
 .borrowed .container{
   text-align: center;
 }
+
+#list-item{
+  color: #F4B536;
+  font-style: bold;
+}
