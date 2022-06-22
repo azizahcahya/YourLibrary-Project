@@ -102,6 +102,22 @@ body {
   font-family: 'inika';
 }
 
+.list a:link { 
+  color: rgba(244, 181, 54, 1);
+  text-decoration: none; 
+}
+.list a:visited { 
+  color: rgba(244, 181, 54, 1);
+  text-decoration: none; }
+
+.list a:hover { 
+  color: rgba(244, 181, 54, 1);
+  text-decoration: none; }
+
+.list a:active { 
+  color: rgba(244, 181, 54, 1);
+  text-decoration: none; }
+
 .book{
   width: 200px;
   height: 200px;

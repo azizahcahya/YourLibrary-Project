@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Peminjaman;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 
 
 
@@ -21,13 +23,13 @@ class PeminjamanController extends Controller
         ]);
     }
     public function indexnew(){
-        $data=\DB::table('peminjamen')->get();
+        $data=DB::table('peminjamen')->get();
         return view('admin.booking.index', ['data' => $data]);
     }
 
     public function editstatus($id)
     {
-        $data = \DB::table('peminjamen')->where('id', $id)->first();
+        $data = DB::table('peminjamen')->where('id', $id)->first();
         return view('admin.booking.edit', compact('data', 'id'));
     }
     public function updatestatus(Request $request, $id)

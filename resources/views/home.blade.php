@@ -56,8 +56,10 @@
     @endif
         @php echo "<div class='col'>
           <div class='book'>" @endphp
+          <a href="/booksDetail/{{$post->id}}">
             <p class='ms-3 mt-3'>{{$post->id}}
               <img src='{{ asset('image/' . $post->image) }}' class='figure-img img-fluid rounded-lg' alt='keratonYogya'>
+            </a>
           @php echo "</div>
         </div>";
         @endphp
