@@ -7,22 +7,23 @@
 @section('Container')
 <div class="container p-4">
 
-    <form action="/formpeminjaman/{id}" method="POST">
-    {{ csrf_field() }}  
+    <form action="/formpeminjaman/{{$posts->id}}" method="POST" enctype="multipart/form-data">
     {{-- @method('PUT') --}}
+    {{ csrf_field() }}  
+
     <h4><b>FORM</b></h4>
     <div class="form-group">
-    <div class="mb-3 row">
-        <label for="title" class="col-md-4 col-form-label">Title</label>
-        <div class="col-sm-7">
-            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ $posts->title }}">
-            @error('title')
-              <div class="invalid-feedback">
-                  {{ $message }}
-              </div>
-            @enderror
+        <div class="mb-3 row">
+            <label for="" class="col-md-4 col-form-label">Title</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title', $posts->title) }}" readonly>
+                @error('title')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+            </div>
         </div>
-    </div>
     </div>
     <div class="form-group">
     <div class="mb-3 row">
@@ -51,7 +52,15 @@
     </div>
     </div>
     <div class="button">
-        <button type="submit" class="btn btn-outline-light"><b>SUBMIT</b></button></div>
+        <button type="submit" class="btn btn-outline-light"><b>SUBMIT</b></button>
+    </div>
     </form>
 </div>
+<script>
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementsByName("DateBorrowed")[0].setAttribute('min', today);
+
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementsByName("DueDate")[0].setAttribute('min', today);
+</script>
 @endsection

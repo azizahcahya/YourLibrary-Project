@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 
-
-
 class PeminjamanController extends Controller
 {
     /**
@@ -73,7 +71,7 @@ class PeminjamanController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'nullable',
+            'title' => 'required',
             'DateBorrowed' => 'required',
             'DueDate' => 'required'
         ]);
@@ -82,7 +80,7 @@ class PeminjamanController extends Controller
 
         // $validatedData['user_id'] = auth()->user()->id;
 
-        return redirect('/formpeminjaman/{id}')->with('success', 'New post has been added!');
+        return redirect('/yourbooks')->with('success', 'New post has been added!');
     }
 
     /**
@@ -122,7 +120,7 @@ class PeminjamanController extends Controller
     public function update(Request $request, Peminjaman $peminjaman)
     {
         $validatedData = $request->validate([
-            'title' => 'nullable',
+            'title' => 'required',
             'DateBorrowed' => 'required',
             'DueDate' => 'required'
         ]);
@@ -130,7 +128,7 @@ class PeminjamanController extends Controller
         Peminjaman::where('id', $peminjaman->id)
             ->update($validatedData);
 
-        return redirect('/formpeminjaman/{id}')->with('success', 'Peminjaman has been updated!');
+        return redirect('/formpeminjaman')->with('success', 'Peminjaman has been updated!');
     }
 
     /**
